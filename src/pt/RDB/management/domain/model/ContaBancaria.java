@@ -4,16 +4,18 @@ public class ContaBancaria {
 	private int accountNumber;
 	private int saldo;
 	private String transactionHistory;
+	private Client client;
 	
 	
 	public ContaBancaria(int accountNumber, int saldo, String transactionHistory, Client client) {
 		this.accountNumber = accountNumber;
 		this.saldo = saldo;
 		this.transactionHistory = transactionHistory;
+		this.client = client;
 	}
 
 	public Client getClient() {
-		return getClient();
+		return client;
 	}
 	
 	public int getAccountNumber() {

@@ -13,7 +13,7 @@ public class Client {
 	private String profissao;
 	
 	
-public Client (int nif, String password, String name, SimpleDateFormat dateofbirth, 
+public Client (int nif, String password, String name, SimpleDateFormat dateofbirth,
 		int telefone, String email, String profissao) {
 	
 	this.nif = nif;
