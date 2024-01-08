@@ -1,13 +1,16 @@
-package pt.RDB.management.domain.model;
+package pt.RDB.management.domain;
 
 public class ContaBancaria {
 	private int accountNumber;
-	private int saldo;
+	private double saldo;
 	private String transactionHistory;
 	private Client client;
 	
+	public ContaBancaria() {
+		
+	}
 	
-	public ContaBancaria(int accountNumber, int saldo, String transactionHistory, Client client) {
+	public ContaBancaria(int accountNumber, double saldo, String transactionHistory, Client client) {
 		this.accountNumber = accountNumber;
 		this.saldo = saldo;
 		this.transactionHistory = transactionHistory;
@@ -28,12 +31,12 @@ public class ContaBancaria {
 	}
 
 
-	public int getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 
 
-	public void setSaldo(int saldo) {
+	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 

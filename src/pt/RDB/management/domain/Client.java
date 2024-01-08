@@ -1,30 +1,45 @@
-package pt.RDB.management.domain.model;
+package pt.RDB.management.domain;
 
+import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 public class Client {
 		
-	SimpleDateFormat dateofbirth = new SimpleDateFormat("DD/MM/YYYY");
+	private SimpleDateFormat dateofbirthFormat = new SimpleDateFormat("DD/MM/YYYY");
 	private int nif;
 	private String password;
 	private String name;
 	private int telefone;
+	private int telemovel;
 	private String email;
 	private String profissao;
 	
+	public Client () {
+		
+	}
 	
-public Client (int nif, String password, String name, SimpleDateFormat dateofbirth,
-		int telefone, String email, String profissao) {
+	public Client (int nif, String password, String name, Date dateofbirth,
+		int telefone, int telemovel, String email, String profissao) {
 	
 	this.nif = nif;
 	this.password = password;
 	this.name = name;
-	this.dateofbirth = dateofbirth;
+	this.dateofbirthFormat = new SimpleDateFormat ("dd/MM/yyyy");
+	this.dateofbirthFormat.format(dateofbirth);
 	this.telefone = telefone;
+	this.telemovel = telemovel;
 	this.email = email;
 	this.profissao = profissao;
 }
 
+
+public int getTelemovel() {
+		return telemovel;
+	}
+
+	public void setTelemovel(int telemovel) {
+		this.telemovel = telemovel;
+	}
 
 public int getNif() {
 	return nif;
@@ -57,12 +72,12 @@ public void setName(String name) {
 
 
 public SimpleDateFormat getDateofbirth() {
-	return dateofbirth;
+	return dateofbirthFormat;
 }
 
 
 public void setDateofbirth(SimpleDateFormat dateofbirth) {
-	this.dateofbirth = dateofbirth;
+	this.dateofbirthFormat = dateofbirth;
 }
 
 
