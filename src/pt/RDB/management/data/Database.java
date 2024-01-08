@@ -1,11 +1,10 @@
 package pt.RDB.management.data;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import pt.RDB.management.domain.model.Client;
-import pt.RDB.management.domain.model.ContaBancaria;
+import pt.RDB.management.domain.Client;
+import pt.RDB.management.domain.ContaBancaria;
 
 public class Database {
 
@@ -20,9 +19,9 @@ public class Database {
 
 	private static void seedData() {
 		
-		Client client1 = new Client(23213123,"sdadsd","sadsaodk",new SimpleDateFormat("08/07/1994"),331231,"sadsadas","sdsasda");
-		clients.add(client1);
-		cb.add(new ContaBancaria(545456465,4564564,"saddsaasd",client1));
+		//Client client1 = new Client(5464654,"password","nome","08/07/1994",239878879,914088484,"email","job");
+		//clients.add(client1);
+		// cb.add(new ContaBancaria(545456465,4564564,"saddsaasd",client1));
 	}
 	
 }
